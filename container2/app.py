@@ -15,7 +15,7 @@ def compute_sum():
     if not request_data or 'file' not in request_data or not request_data['file'] or 'product' not in request_data or not request_data['product']:
         return jsonify({"file": None, "error": "Invalid JSON input."}), 400
 
-    filename = request_data['file']
+    filename = request_data['file'] 
     target_product = request_data['product']
     file_path = os.path.join(PV_DIR, filename)
 

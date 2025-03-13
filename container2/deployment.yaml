@@ -16,7 +16,7 @@ spec:
       - name: calc-service
         image: us-central1-docker.pkg.dev/assignment-k8s/calc-service
         ports:
-        - containerPort: 5001
+        - containerPort: 7000
         volumeMounts:
         - mountPath: "/akshita_PV_dir"
           name: persistent-storage

@@ -1,9 +1,12 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/kubernetes-453620/k8-assignment/container2', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/kubernetes-453620/k8-assignment/container2', '-f', 'container2/Dockerfile', 'container2']
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-central1-docker.pkg.dev/kubernetes-453620/k8-assignment/container2']
 
 images:
 - 'us-central1-docker.pkg.dev/kubernetes-453620/k8-assignment/container2'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
