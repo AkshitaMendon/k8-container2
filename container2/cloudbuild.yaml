@@ -11,9 +11,9 @@ steps:
   - '-c'
   - |
       gcloud container clusters get-credentials k8-cluster --zone us-central1
-      kubectl apply -f pvc.yaml
-      kubectl apply -f container2-deployment.yaml
-      kubectl apply -f container2-service.yaml
+      kubectl apply -f container2/pvc.yaml
+      kubectl apply -f container2/container2-deployment.yaml
+      kubectl apply -f container2/container2-service.yaml
 
 images:
 - 'us-central1-docker.pkg.dev/kubernetes-453620/k8-assignment/container2:latest'
