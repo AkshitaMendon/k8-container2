@@ -4,7 +4,7 @@ import csv
 
 app = Flask(__name__)
 
-# Persistent Volume Directory
+# Persistent Volume Directory Path
 PV_DIR = "/akshita_PV_dir"
 
 @app.route('/compute', methods=['POST'])
